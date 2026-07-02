@@ -172,3 +172,20 @@ add_custom_target(w01d01_all
         w01d01_runtime_error
         w01d01_check_task
 )
+
+# ---------------------------------------------------------------------------
+# 第 1 周 / 第 3 天：指针、引用、nullptr 与悬空对象。
+# ---------------------------------------------------------------------------
+
+set(W01D03_DIR ${CMAKE_CURRENT_SOURCE_DIR}/labs/w01/d03_pointer)
+
+add_lab_executable(w01d03_pointer
+    ${W01D03_DIR}/pointer.cpp
+)
+
+add_lab_executable(w01d03_param_pass
+    ${W01D03_DIR}/param_pass.cpp
+)
+
+add_test(NAME w01d03_pointer_runs COMMAND w01d03_pointer)
+add_test(NAME w01d03_param_pass_runs COMMAND w01d03_param_pass)
